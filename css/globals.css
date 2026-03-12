@@ -1,0 +1,53 @@
+@font-face{font-family:'Vaulto-ExtraBold';src:url(../fonts/Vaulto-ExtraBold.woff2) format("woff2"),url(../fonts/Vaulto-ExtraBold.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+.font-vaulto{font-family:'Vaulto-ExtraBold';font-weight:400;font-style:normal;}
+
+:root {
+    --primary: #355872;
+    --primaryLight: #7AAACE;
+    --secondary: #9CD5FF;
+    --secondaryLight: #9CD5FF;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #F7F8F0;
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-family:'Vaulto-ExtraBold';
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    max-width: 40.625rem;
+    color: var(--bodyTextColor);
+}

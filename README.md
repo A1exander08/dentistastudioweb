@@ -1,2 +1,9 @@
-# dentistawebstudio
-il sito commerciale - biglietto da visita per le aziende
+GRAFICA: 
+- pulita e spaziosa, bg chiaro.
+- decorazioni colorate e pulite, nette e senza sbavature.
+
+-> deve avere una grafica di tipo PREMIUM.
+
+DA FARE:
+
+
