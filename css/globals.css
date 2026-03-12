@@ -1,11 +1,24 @@
-@font-face{font-family:'Vaulto-ExtraBold';src:url(../fonts/Vaulto-ExtraBold.woff2) format("woff2"),url(../fonts/Vaulto-ExtraBold.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
-.font-vaulto{font-family:'Vaulto-ExtraBold';font-weight:400;font-style:normal;}
+@font-face {
+    font-family: 'Vaulto-ExtraBold';
+    src: url(../fonts/Vaulto-ExtraBold.woff2) format("woff2"), url(../fonts/Vaulto-ExtraBold.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+.font-vaulto {
+    font-family: 'Vaulto-ExtraBold';
+    font-weight: 400;
+    font-style: normal;
+}
 
 :root {
     --primary: #355872;
     --primaryLight: #7AAACE;
     --secondary: #9CD5FF;
     --secondaryLight: #9CD5FF;
+    --third: #fca3ce;
+    --thirdLight: #fca3ce;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #F7F8F0;
@@ -20,7 +33,9 @@ body {
     padding: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -30,13 +45,13 @@ body {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--third);
     margin-bottom: 0.25rem;
     display: block;
 }
 
 .cs-title {
-    font-family:'Vaulto-ExtraBold';
+    font-family: 'Vaulto-ExtraBold';
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
