@@ -27,7 +27,7 @@ html {
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #F7F8F0;
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --headerFontSize: clamp(1.5375rem, 7.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
@@ -100,7 +100,8 @@ p {
     margin: 0;
     color: #fff;
     border: none;
-    min-width: 20.375rem;
+    max-width: 22.375rem;
+    width: 100%;
     padding: 0 1.5rem;
     background-color: var(--primary);
     border-radius: .4rem;

@@ -38,3 +38,5 @@ DA FARE --> GRAFICA:
 - in CHI SONO inserire 3 icone
 
 - bg in FOOTER
+
+- favicon
