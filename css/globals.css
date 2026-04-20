@@ -82,43 +82,32 @@ p {
     font-weight: bold;
 }
 
-.primary {
-    color: var(--primary) !important;
+.gradient {
+    background: linear-gradient(160deg, #6eb7cb, #65aabd, #4b82a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
 
-/* BUTTON ********************************/
-.btn-main {
-    font-size: .8rem;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-decoration: none;
-    font-weight: 400;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    border: none;
-    max-width: 22.375rem;
-    width: 100%;
-    padding: 0 1.5rem;
-    background-color: var(--primary);
-    border-radius: .4rem;
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    box-sizing: border-box;
-    transition-duration: 0.6s;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
+/* CTA ********************************/
+.btn-main {font-size: .8rem;font-family: Arial, Helvetica, sans-serif;letter-spacing: 10px;text-transform: uppercase;
+    line-height: clamp(2.875em, 5.5vw, 3.5em);text-decoration: none;font-weight: 400;text-align: center;margin: 0;color: #fff;
+    border: none;max-width: 22.375rem;width: 100%;padding: 0 1.5rem;background: linear-gradient(160deg, #6eb7cb, #65aabd, #3f7295);background-size: 100% 100%;
+    border-radius: .4rem;overflow: hidden;display: inline-block;position: relative;z-index: 1;box-sizing: border-box;transition-duration: 0.6s;cursor: pointer;
+    margin-bottom: 20px;background-position: 100% 50%;box-shadow: 0 4px 12px rgba(75, 130, 166, 0.15);}
+.btn-main.variante {background: linear-gradient(160deg, #8fd3e0, #7bc0d1, #5c9bb5);background-size: 300% 300%;}
+.btn-main:hover {letter-spacing: 10.7px;}
+.cta-phone {width: 100%;max-width: 22.375rem;font-size: 1rem;line-height: 1.5em;text-decoration: none;margin: 0;color: var(--headerColor);
+    display: flex;justify-content: center;align-items: center;gap: 0.5rem;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;letter-spacing: 3px;
+    text-align: center;}
+.cta-phone img {width: 1.5rem;height: auto;display: block;}
 
-.btn-main.variante {
-    background-color: var(--primaryLight) !important;
-}
-
-.btn-main:hover {
-    letter-spacing: 11px;
+/* UTILI ******************************/
+.d-none{display:none!important}
+.d-block{display:inline-block!important}
+.d-flex{display:flex!important}
+@media only screen and (min-width: 64rem) {
+    .d-lg-none{display:none!important}
+    .d-lg-block{display:inline-block!important}
+    .d-lg-flex{display:flex!important} 
 }
