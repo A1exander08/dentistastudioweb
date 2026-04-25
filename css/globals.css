@@ -1,21 +1,13 @@
-@font-face {
-    font-family: 'Vaulto-ExtraBold';
-    src: url(../fonts/Vaulto-ExtraBold.woff2) format("woff2"), url(../fonts/Vaulto-ExtraBold.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap
-}
+/* FONT FAMILY ********************************/
+@font-face{font-family:'Vaulto-ExtraBold';src:url(../fonts/Vaulto-ExtraBold.woff2) format("woff2"),url(../fonts/Vaulto-ExtraBold.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+.font-vaulto{font-family:'Vaulto-ExtraBold';font-weight:400;font-style:normal}
 
-.font-vaulto {
-    font-family: 'Vaulto-ExtraBold';
-    font-weight: 400;
-    font-style: normal;
-}
+/* GENERALI ***************************/
+*,:before,:after{box-sizing:border-box}
+html {scroll-behavior: smooth}
+body{margin:0;padding:0}
 
-html {
-    scroll-behavior: smooth;
-}
-
+/* PALETTE ****************************/
 :root {
     --primary: #355872;
     --primaryLight: #7AAACE;
@@ -32,64 +24,15 @@ html {
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
+/* TITOLI ****************************/
+p{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;letter-spacing:1px}
+.cs-topper{font-size:var(--topperFontSize);font-family:sans-serif;line-height:1.2em;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--third);margin-bottom:.25rem;display:block}
+.cs-title{font-family:'Vaulto-ExtraBold';font-size:var(--headerFontSize);font-weight:900;line-height:1.2em;max-width:43.75rem;margin:0 0 1rem;color:var(--headerColor)}
+.cs-text{font-size:var(--bodyFontSize);line-height:1.5em;max-width:40.625rem;color:var(--bodyTextColor)}
+.primarylight{color:var(--primaryLight)!important;font-weight:700}
+.gradient{background:linear-gradient(160deg,#6eb7cb,#65aabd,#4b82a6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
 
-p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: 1px;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-.cs-topper {
-    font-size: var(--topperFontSize);
-    font-family: sans-serif;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-weight: 900;
-    color: var(--third);
-    margin-bottom: 0.25rem;
-    display: block;
-}
-
-.cs-title {
-    font-family: 'Vaulto-ExtraBold';
-    font-size: var(--headerFontSize);
-    font-weight: 900;
-    line-height: 1.2em;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-}
-
-.cs-text {
-    font-size: var(--bodyFontSize);
-    line-height: 1.5em;
-    max-width: 40.625rem;
-    color: var(--bodyTextColor);
-}
-
-.primarylight {
-    color: var(--primaryLight) !important;
-    font-weight: bold;
-}
-
-.gradient {
-    background: linear-gradient(160deg, #6eb7cb, #65aabd, #4b82a6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-}
-
-/* CTA ********************************/
+/* BTN ********************************/
 .btn-main {font-size: .8rem;font-family: Arial, Helvetica, sans-serif;letter-spacing: 10px;text-transform: uppercase;
     line-height: clamp(2.875em, 5.5vw, 3.5em);text-decoration: none;font-weight: 400;text-align: center;margin: 0;color: #fff;
     border: none;max-width: 22.375rem;width: 100%;padding: 0 1.5rem;background: linear-gradient(160deg, #6eb7cb, #65aabd, #3f7295);background-size: 100% 100%;
@@ -107,7 +50,7 @@ p {
 .d-block{display:inline-block!important}
 .d-flex{display:flex!important}
 @media only screen and (min-width: 64rem) {
-    .d-lg-none{display:none!important}
-    .d-lg-block{display:inline-block!important}
-    .d-lg-flex{display:flex!important} 
+.d-lg-none{display:none!important}
+.d-lg-block{display:inline-block!important}
+.d-lg-flex{display:flex!important}
 }
