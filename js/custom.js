@@ -1,7 +1,7 @@
 
 var CSbody = document.querySelector("body");
-const CSnavbarMenu = document.querySelector("#cs-navigation");
-const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+const CSnavbarMenu = document.querySelector("#header01");
+const CShamburgerMenu = document.querySelector("#header01 .cs-toggle");
 
 CShamburgerMenu.addEventListener('click', function () {
     CShamburgerMenu.classList.toggle("cs-active");
@@ -31,7 +31,7 @@ document.addEventListener('scroll', (e) => {
 });
 
 
-const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+const dropDowns = Array.from(document.querySelectorAll('#header01 .cs-dropdown'));
 for (const item of dropDowns) {
     const onClick = () => {
         item.classList.toggle('cs-active')
@@ -40,7 +40,7 @@ for (const item of dropDowns) {
 }
 
 // chiude il menu mobile quando si clicca un link
-const navLinks = document.querySelectorAll('#cs-navigation .cs-li-link');
+const navLinks = document.querySelectorAll('#header01 .cs-li-link');
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
