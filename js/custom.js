@@ -52,3 +52,20 @@ navLinks.forEach(link => {
         csUL.setAttribute('aria-expanded', 'false');
     });
 });
+
+//modal
+const modal = document.getElementById("contactModal");
+
+function openModal() {
+    modal.classList.add("show");
+}
+
+function closeModal() {
+    modal.classList.remove("show");
+}
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+    closeModal();
+    }
+}

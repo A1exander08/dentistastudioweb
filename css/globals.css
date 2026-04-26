@@ -54,3 +54,20 @@ p{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;letter-spacing:1px}
 .d-lg-block{display:inline-block!important}
 .d-lg-flex{display:flex!important}
 }
+
+/* MODAL *****************************/
+/* MODAL - container */
+.modal{display:flex;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background-color:#00000080;justify-content:center;
+    align-items:center;opacity:0;visibility:hidden;transition:opacity .3s ease}
+.modal.show{opacity:1;visibility:visible}
+.modal-content{background:#fff;padding:45px;border-radius:10px;width:500px;position:relative;box-shadow:0 5px 20px #0003;
+    transform:scale(0.7);transition:transform .3s ease}
+.modal.show .modal-content{transform:scale(1)}
+/* MODAL - componenti */
+.modal .close{background: linear-gradient(160deg, #8fd3e0, #7bc0d1, #5c9bb5);background-size: 300% 300%;;padding: 5px;border-radius: 50%;
+    padding-inline: 19px;color: white;font-size: 50px;cursor: pointer;position: absolute;top: -20px;right: -20px;}
+.modal .modal-title{font-family:'Vaulto-ExtraBold';font-size:clamp(1.5375rem, 7.9vw, 2.0625rem);;font-weight:900;line-height:1.2em;max-width:43.75rem;
+    margin:0 0 1rem;color:var(--headerColor);text-transform: uppercase;margin-bottom: 30px;}
+.modal .contact-item{padding-bottom:15px;}
+.modal a{display: flex;align-items: center;justify-content: start;gap: 10px;color: #3f7295;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    letter-spacing:1px;font-size: 1.1rem;}
