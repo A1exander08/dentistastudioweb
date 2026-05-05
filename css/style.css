@@ -181,9 +181,13 @@ to{transform:scale(1);opacity:1}
    display: block;position: absolute;top: 0;right: 0;z-index: -1;}
 #cta02 .cs-container{width:100%;max-width:74rem;margin:auto;display:flex;flex-direction:column;align-items:center;gap:clamp(3rem,6vw,4rem)}
 #cta02 .cs-content{text-align:center;width:100%;display:flex;flex-direction:column;align-items:center}
-#cta02 .cs-title{max-width:73.75rem!important;font-size: clamp(1.3375rem, 6.9vw, 2.0625rem);}
-#cta02 .cs-text{max-width:66.25rem;background-color: white;border-radius: 20px;padding: 50px;border: 5px solid #4b82a6;padding-inline: 25px;}
+#cta02 .cs-title{max-width:73.75rem!important;font-size: clamp(1.3375rem, 6.9vw, 2.0625rem);color: #fff;line-height: 1.4em;}
+#cta02 .cs-text{max-width:66.25rem;background-color: white;border-radius: 20px;padding: 50px;border: 5px solid #4b82a6;padding-inline: 25px;text-align: center;}
 #cta02 .cs-arrow {width: 9.625rem;height: auto;margin-bottom: 1.25rem;display: block;filter: invert(5%) sepia(20%) saturate(1138%) hue-rotate(134deg) brightness(80%) contrast(109%)}
+@media only screen and (min-width: 48rem) {
+   #cta02 .cs-title{max-width:21ch!important;margin-bottom:clamp(1.25rem,3vw,2rem);font-size:var(--headerFontSize);color:#fff}
+   #cta02 .cs-text{text-align: start;}
+}
 
 /* SERVIZI ***************************/
 #servizi01{padding:var(--sectionPadding);overflow:hidden;position:relative}
@@ -209,26 +213,23 @@ to{transform:scale(1);opacity:1}
 }
 
 /* REPORT ******************************/
-#report{padding:var(--sectionPadding);overflow:hidden;position:relative;z-index:1;background-image: url(../images/sfondo-cemento.webp);background-color: var(--white);background-size: contain;
-   background-repeat: repeat;background-position: center center;}
-
-
+#report{padding:var(--sectionPadding);overflow:hidden;position:relative;z-index:1;background-image: url(../images/sfondo-cemento.webp);
+   background-color: var(--white);background-size: contain;background-repeat: repeat;background-position: center center;}
 #report::before{content: "";width: 100%;height: 100%;background-color: white;opacity: .5;position: absolute;top: 0;left: 0;z-index: -1;}
-
-
-#report .cs-container{width:100%;max-width:53.125rem;margin:auto;display:flex;justify-content:center;align-items:stretch;flex-direction:column;gap:clamp(2rem,5vw,6.75rem)}
+#report .cs-container{width:100%;max-width:53.125rem;margin:auto;display:flex;justify-content:center;align-items:stretch;flex-direction:column;
+   gap:clamp(2rem,5vw,6.75rem)}
 #report .cs-content{text-align:center;width:100%;display:flex;flex-direction:column;align-items:flex-start;order:1}
 #report .cs-title{max-width:20ch}
+#report .cs-topper{margin-right: auto;margin-left: auto;}
 #report .cs-text{margin-bottom:1rem}
 #report .cs-text:last-of-type{margin-bottom:2rem}
-
-#report .cs-ul{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;letter-spacing:1px;width:fit-content;margin:1.4rem 0;padding:0;display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}
+#report .cs-ul{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;letter-spacing:1px;width:fit-content;margin:1.4rem 0;padding:0;display:flex;
+   flex-direction:column;align-items:flex-start;gap:.8rem}
 #report .cs-li{line-height:1.25;text-align:left;list-style:none;width:100%;margin:0;padding:.85rem .95rem;color:var(--bodyTextColor);display:flex;
    align-items:flex-start;gap:.75rem;font-weight:700;text-transform:uppercase;font-size:.9rem;border:1px solid rgba(53,88,114,.1);border-radius:.75rem;
    background:#fff;box-shadow:0 12px 26px rgba(16,34,50,.06);}
 #report .cs-icon{width:1.5rem;height:auto;flex:none;padding:.25rem;background-color:var(--primary);border-radius:50%;display:block;
    background:linear-gradient(160deg,#6eb7cb,#355872);box-shadow:0 8px 18px rgba(53,88,114,.18)}
-
 #report .cs-picture{width:100%;height:clamp(28.5rem,46vw,37.375rem);border-radius:1.25rem;overflow:hidden;display:block;order:2;position:relative;z-index:1}
 #report .cs-picture img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
 #report .cs-background{width:100%;height:44%;background-color:var(--primary);display:block;position:absolute;bottom:0;left:0;border-radius:20px;z-index:-1}
@@ -238,6 +239,7 @@ to{transform:scale(1);opacity:1}
 #report .cs-flex{width:45%}
 #report .cs-title{margin:0}
 #report .cs-text{width:50%}
+#report .cs-topper{margin-right:unset;margin-left:unset;}
 }
 @media only screen and (min-width: 64rem) {
 #report .cs-container{max-width:80rem;flex-direction:row;align-items:center;justify-content:space-between}
@@ -347,7 +349,10 @@ to{transform:scale(1);opacity:1}
 #chi-sono .cs-li-text{font-size:1rem;line-height:1.5em;text-align:left;margin:0;color:var(--bodyTextColor)}
 #chi-sono .cs-image-group{font-size:min(1.6vw,.6em);text-align:right;width:auto;height:65.625em;display:flex;justify-content:center;align-items:flex-end;position:relative}
 #chi-sono .cs-person{height:100%;width:auto;display:inline-flex;align-items:flex-end;justify-content:center;position:relative}
-#chi-sono .cs-person img{width:auto;height:100%;margin:0;display:block;object-fit:contain}
+#chi-sono .cs-person img{max-width:100%;height:100%;margin:0;display:block;object-fit:contain}
+#chi-sono .cs-li{width:100%;padding:1rem;border:1px solid rgba(53,88,114,.1);border-radius:.9rem;background:#fff;box-shadow:0 14px 34px rgba(16,34,50,.06);
+   transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+#chi-sono .cs-li:hover{transform:translateY(-3px);border-color:rgba(67,176,239,.28);box-shadow:0 22px 48px rgba(16,34,50,.1)}
 @media only screen and (min-width: 64rem) {
 #chi-sono .cs-container{max-width:80rem;flex-direction:row;justify-content:flex-start;position:relative}
 #chi-sono .cs-content{width:50%;align-items:flex-start;text-align:left}
@@ -377,8 +382,18 @@ to{transform:scale(1);opacity:1}
 #loghi .cs-logo.logo4{width:clamp(70px,13vw,138px)}
 #loghi .cs-logo.logo5{width:clamp(58px,13vw,121px)}
 #loghi .cs-logo.logo6{width:clamp(104px,13vw,180px)}
-@media only screen and (min-width: 650px) {
-#loghi .cs-container{flex-direction:row}
+
+#loghi{padding:clamp(3rem,6vw,5rem) 1rem;background:#fff}
+#loghi .cs-container{max-width:78rem;padding:clamp(1.2rem,3vw,2rem);border:1px solid rgba(53,88,114,.1);border-radius:1.25rem;
+   background:linear-gradient(180deg,#fff,#f7fbfd);box-shadow:0 24px 70px rgba(16,34,50,.08);position:relative;overflow:hidden}
+#loghi .cs-container:before{content:"Tecnologie e strumenti";font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:.78rem;line-height:1.2em;
+   text-transform:uppercase;letter-spacing:.16em;font-weight:900;color:#6f8798;position:absolute;top:1rem;left:1.25rem}
+
+
+#loghi .cs-logo{transition:transform .2s ease}
+#loghi .cs-logo:hover{transform:translateY(-3px)}
+@media only screen and (min-width: 48rem) {
+#loghi .cs-container{flex-direction:row;padding-top:3.5rem}
 #loghi .cs-row{display:contents}
 }
 
@@ -416,8 +431,8 @@ to{transform:scale(1);opacity:1}
 }
 
 /* PREMIUM REFRESH ********************/
-#cta02,#servizi01,#report,#prezzo01{isolation:isolate}
-#cta02 .cs-topper,#servizi01 .cs-topper,#report .cs-topper,#prezzo01 .cs-topper{padding:.45rem .85rem;border:1px solid rgba(67,176,239,.18);border-radius:999px;background:rgba(255,255,255,.72);box-shadow:0 10px 30px rgba(53,88,114,.08);width:fit-content}
+#cta02 .cs-topper,#servizi01 .cs-topper,#report .cs-topper,#prezzo01 .cs-topper{padding:.45rem .85rem;border:1px solid rgba(67,176,239,.18);
+   border-radius:999px;background:rgba(255,255,255,.72);box-shadow:0 10px 30px rgba(53,88,114,.08);width:fit-content}
 
 #cta02{padding:clamp(4rem,8vw,7.5rem) 1rem;background:linear-gradient(135deg,#102232 0%,#233f55 48%,#355872 100%);color:#fff}
 #cta02::before{background-image:url(https://csimages.lon1.digitaloceanspaces.com/pics/dentista/bg/bg01.jpg);background-size:cover;background-position:center;opacity:.12;mix-blend-mode:screen}
@@ -425,9 +440,9 @@ to{transform:scale(1);opacity:1}
 #cta02 .cs-container{max-width:78rem;gap:clamp(1.75rem,4vw,3.5rem)}
 #cta02 .cs-content{padding:clamp(1.2rem,3vw,2rem);border:1px solid rgba(255,255,255,.16);border-radius:1.25rem;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));box-shadow:0 28px 80px rgba(3,14,23,.24);backdrop-filter:blur(8px)}
 #cta02 .cs-topper{background:rgba(255,255,255,.08);color:#bde9ff;border-color:rgba(255,255,255,.18)}
-#cta02 .cs-title{max-width:21ch!important;margin-bottom:clamp(1.25rem,3vw,2rem);font-size:var(--headerFontSize);color:#fff}
 #cta02 .cs-title u{text-decoration-thickness:.12em;text-underline-offset:.12em;text-decoration-color:rgba(156,213,255,.55)}
-#cta02 .cs-text{max-width:54rem;margin:0;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.7);border-radius:1rem;padding:clamp(1.3rem,4vw,3rem);box-shadow:0 20px 60px rgba(3,14,23,.24);color:#30495b}
+#cta02 .cs-text{max-width:54rem;margin:0;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.7);border-radius:1rem;
+   padding:clamp(1.3rem,4vw,3rem);box-shadow:0 20px 60px rgba(3,14,23,.24);color:#30495b}
 #cta02 .cs-arrow{width:clamp(5rem,12vw,8rem);margin:-.25rem 0 1rem;filter:brightness(0) invert(1);opacity:.82}
 #cta02 .cs-img{width:100%;height:auto;padding:20px;}
 
@@ -474,29 +489,19 @@ to{transform:scale(1);opacity:1}
 }
 @media only screen and (max-width:63.9375rem){
 #page-hero .cs-title{font-size:3rem}
-#report .cs-content{flex-direction:column;align-items:center;text-align:center}
-#report .cs-flex{width:100%;text-align:center}
-#report .cs-text{width:100%}
 }
 @media only screen and (min-width:64rem){
 #cta02 .cs-content{padding:clamp(2rem,4vw,4rem)}
 #servizi01 .cs-item{grid-column:span 4}
-#report .cs-content{max-width:29rem}
-#report .cs-picture{height:clamp(31rem,43vw,39rem)}
 #prezzo01 .cs-card{padding:clamp(2.5rem,5vw,4rem)}
 }
 @media only screen and (max-width:47.9375rem){
-#cta02 .cs-content,#report .cs-content{border-radius:1rem}
+#cta02 .cs-content{border-radius:1rem}
 #page-hero .cs-title{font-size:2.35rem}
 #servizi01 .cs-h3,#prezzo01 .cs-package{font-size:1.35rem}
-#cta02 .cs-text{padding:1.2rem;text-align:left}
 #servizi01 .cs-item{text-align:left;align-items:flex-start}
 #servizi01 .cs-icon{margin-bottom:.85rem}
 #servizi01 .cs-number-wrapper{margin-left:0}
-#report:before{width:100%;height:100%;border-radius:0;top:0}
-#report .cs-content{align-items:center;text-align:center}
-#report .cs-title{margin-left:auto;margin-right:auto}
-#report .cs-picture{height:clamp(20rem,95vw,30rem)}
 #prezzo01 .cs-button,#prezzo01 .cs-card{border-radius:1rem}
 #prezzo01 .cs-li{text-transform:none}
 #prezzo01 .disclaimer{align-items:flex-start}
@@ -504,65 +509,22 @@ to{transform:scale(1);opacity:1}
 
 /* PREMIUM REFRESH - CTA, DEVELOPER, LOGOS */
 
-#chi-sono{padding:clamp(4rem,8vw,7.5rem) 1rem;background:linear-gradient(180deg,#fff 0%,#f5f9fc 100%);position:relative}
-#chi-sono:before{content:"";width:min(92%,78rem);height:calc(100% - clamp(4rem,8vw,7rem));border-radius:1.5rem;background:linear-gradient(135deg,rgba(53,88,114,.07),rgba(255,255,255,.8));box-shadow:inset 0 0 0 1px rgba(53,88,114,.08);position:absolute;top:clamp(2rem,4vw,3.5rem);left:50%;transform:translateX(-50%);z-index:0}
-#chi-sono .cs-container{max-width:78rem;z-index:1}
-#chi-sono .cs-content{padding:clamp(1.25rem,3vw,2.25rem);border:1px solid rgba(53,88,114,.12);border-radius:1.25rem;background:rgba(255,255,255,.82);box-shadow:0 24px 70px rgba(16,34,50,.09);backdrop-filter:blur(8px)}
-#chi-sono .cs-topper{width:fit-content;padding:.45rem .85rem;border:1px solid rgba(67,176,239,.18);border-radius:999px;background:#fff;color:var(--third);box-shadow:0 10px 30px rgba(53,88,114,.08)}
-#chi-sono .cs-title{max-width:12ch}
-#chi-sono .cs-text{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#4e6372}
-#chi-sono .cs-card-group{gap:1rem}
-#chi-sono .cs-li{width:100%;padding:1rem;border:1px solid rgba(53,88,114,.1);border-radius:.9rem;background:#fff;box-shadow:0 14px 34px rgba(16,34,50,.06);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-#chi-sono .cs-li:hover{transform:translateY(-3px);border-color:rgba(67,176,239,.28);box-shadow:0 22px 48px rgba(16,34,50,.1)}
-#chi-sono .cs-li-picture{width:4.25rem;height:4.25rem;border-radius:1rem;background:#eef7fc;box-shadow:inset 0 0 0 1px rgba(67,176,239,.14)}
-#chi-sono .cs-li-picture:before{background:linear-gradient(160deg,#6eb7cb,#355872);opacity:.12}
-#chi-sono .cs-h3{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:1rem;line-height:1.45em;color:#263f51}
-#chi-sono .cs-image-group{height:auto;min-height:32rem;padding:1.5rem;border-radius:1.4rem;background:linear-gradient(180deg,#eaf5fb,#fff);box-shadow:0 30px 80px rgba(16,34,50,.12);overflow:hidden}
-#chi-sono .cs-image-group:before{content:"";width:80%;height:64%;border-radius:50%;background:linear-gradient(160deg,rgba(110,183,203,.32),rgba(53,88,114,.08));position:absolute;left:10%;bottom:6%;z-index:0}
-#chi-sono .cs-person{z-index:1}
-#chi-sono .cs-person img{max-width:100%;height:auto;filter:drop-shadow(0 24px 34px rgba(16,34,50,.18))}
-
-#loghi{padding:clamp(3rem,6vw,5rem) 1rem;background:#fff}
-#loghi .cs-container{max-width:78rem;padding:clamp(1.2rem,3vw,2rem);border:1px solid rgba(53,88,114,.1);border-radius:1.25rem;background:linear-gradient(180deg,#fff,#f7fbfd);box-shadow:0 24px 70px rgba(16,34,50,.08);position:relative;overflow:hidden}
-#loghi .cs-container:before{content:"Tecnologie e strumenti";font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:.78rem;line-height:1.2em;text-transform:uppercase;letter-spacing:.16em;font-weight:900;color:#6f8798;position:absolute;top:1rem;left:1.25rem}
-#loghi .cs-row{gap:clamp(.75rem,2vw,1.25rem)}
-#loghi .cs-logo{padding:.85rem;border:1px solid rgba(53,88,114,.08);border-radius:.85rem;background:#fff;box-shadow:0 12px 28px rgba(16,34,50,.05);filter:saturate(.9);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
-#loghi .cs-logo:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(16,34,50,.1);filter:saturate(1)}
-
-@media only screen and (min-width:48rem){
-#loghi .cs-container{padding-top:3.5rem}
-}
 @media only screen and (min-width:64rem){
 #cta01 .cs-background{width:47%;right:53%;border-radius:0 1.25rem 1.25rem 0}
-#cta01 .cs-content{width:100%;max-width:37rem}
-#chi-sono .cs-container{align-items:center;min-height:42rem}
-#chi-sono .cs-content{width:52%;max-width:35rem}
-#chi-sono .cs-image-group{width:40%;min-height:36rem;position:absolute;left:57%;right:auto;top:50%;bottom:auto;transform:translateY(-50%)}
 }
 @media only screen and (min-width:81.25rem){
 #cta01 .cs-background{margin-right:0}
-#chi-sono .cs-image-group{left:56%;top:50%;bottom:auto;transform:translateY(-50%);margin-left:0}
 }
 @media only screen and (max-width:63.9375rem){
 #cta01{min-height:auto}
 #cta01:before{mask-image:linear-gradient(180deg,transparent,#000 24%,#000)}
 #cta01 .cs-title{font-size:2.35rem}
 #cta01 .cs-content{max-width:34rem}
-#chi-sono:before{width:100%;height:100%;border-radius:0;top:0}
-#chi-sono .cs-content{max-width:38rem}
-#chi-sono .cs-image-group{width:min(100%,26rem);min-height:0;position:relative;right:auto;left:auto;bottom:auto;top:auto}
-#loghi .cs-container{padding-top:3.25rem}
 }
 @media only screen and (max-width:47.9375rem){
 #cta01 .cs-content{border-radius:1rem}
 #cta01 .cs-title{font-size:2.15rem}
 #cta01 .cs-background{height:72vw;min-height:16rem;border-radius:0 0 1rem 1rem}
-#chi-sono .cs-content{border-radius:1rem}
-#chi-sono .cs-li{align-items:flex-start}
-#chi-sono .cs-li-picture{width:3.5rem;height:3.5rem}
-#loghi .cs-container{border-radius:1rem}
-#loghi .cs-row{gap:.65rem}
-#loghi .cs-logo{padding:.6rem}
 }
 
 /* PREMIUM HEADER *********************/
